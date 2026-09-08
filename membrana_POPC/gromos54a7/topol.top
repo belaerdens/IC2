@@ -1,0 +1,22 @@
+;
+; Topology file for pure POPC membrane in water
+;
+
+; The force field files to be included
+#include "gromos54a7.ff/forcefield.itp"
+
+;Include molecule .itp files
+#include "/home/isabelaerdens/gromacs/share/gromacs/top/gromos54a7.ff/popc.itp"
+
+; Include water topology
+#include "/home/isabelaerdens/gromacs/share/gromacs/top/gromos54a7.ff/spc.itp"
+
+; Include ion topology
+#include "/home/isabelaerdens/gromacs/share/gromacs/top/gromos54a7.ff/ions.itp"
+
+[ system ]
+POPC in water
+
+[ molecules ]
+SOL     2000
+POPC    128

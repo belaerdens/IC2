@@ -1,0 +1,17 @@
+tolerance 2.0
+seed 246988
+
+filetype pdb
+
+output monocamada.pdb
+
+structure POPC.pdb 
+  number 64
+  inside box 0. 0. 50. 63.1 63.4 80.
+  atoms 20
+    below plane 0. 0. 1. 54.
+  end atoms
+  atoms 131 88
+    over plane 0. 0. 1. 76.
+  end atoms
+end structure

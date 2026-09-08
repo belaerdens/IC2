@@ -1,0 +1,43 @@
+tolerance 2.0
+seed 246988
+pbc 63.1 63.4 160
+
+filetype pdb
+
+output caixa_membrana.pdb
+
+
+structure water.pdb 
+  number 1000
+  inside box 0. 0. 0. 63.1 63.4 50.
+end structure
+
+  
+structure water.pdb
+  number 1000
+  inside box 0. 0. 110. 63.1 63.4 160
+end structure
+
+ 
+structure POPC.pdb 
+  number 64
+  inside box 0. 0. 50. 63.1 63.4 80.
+  atoms 8
+    below plane 0. 0. 1. 54.
+  end atoms
+  atoms 33 52
+    over plane 0. 0. 1. 76.
+  end atoms
+end structure 
+
+  
+structure POPC.pdb 
+  number 64
+  inside box 0. 0. 80. 63.1 63.4 110.
+  atoms 33 52
+    below plane 0. 0. 1. 84.
+  end atoms
+  atoms 8
+    over plane 0. 0. 1. 106. 
+  end atoms
+end structure
