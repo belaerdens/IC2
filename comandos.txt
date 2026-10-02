@@ -1,0 +1,34 @@
+################################ GROMACS ################################
+
+Criar arquivo gro: 
+
+gmx editconf -f caixa_membrana.pdb -o caixa_membrana.gro
+
+Adicionar íons (NaCl)
+gmx grompp -f inputs/ions.mdp -c caixa_membrana.gro -p topol.top -o ions.tpr
+gmx genion -s ions.tpr -o caixa_membrana_ionizada.gro -p topol.top -pname NA -nname CL -conc 0.11 -neutral
+
+Minimizar a energia: 
+gmx grompp -f inputs/minim.mdp -c caixa_membrana_ionizada.gro -p topol.top -o em.tpr
+gmx mdrun -v -deffnm em
+
+Fazer a equilibração:
+gmx make_ndx -f em.gro -o index.ndx
+ > q
+gmx grompp -f inputs/nvt.mdp -c em.gro -r em.gro -p topol.top -n index.ndx -o nvt.tpr
+gmx mdrun -deffnm nvt
+
+Rodar o MD:
+gmx grompp -f  inputs/md.mdp -c nvt.gro -t nvt.cpt -p topol.top -n index.ndx -o md_0_1.tpr
+gmx mdrun -deffnm md_0_1
+
+################################ GIT ################################
+
+ao chegar no computador:
+git pull
+
+para salvar alterações:
+git status
+git add .
+git commit -m "Adiciona novos arquivos"
+git push
