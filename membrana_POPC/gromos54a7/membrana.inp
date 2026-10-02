@@ -1,0 +1,30 @@
+tolerance 2.0
+seed 246988
+pbc 63.1 63.4 160
+
+filetype pdb
+
+output membrana.pdb
+ 
+structure POPC.pdb 
+  number 64
+  inside box 0. 0. 0. 63.1 63.4 30.
+  atoms 8
+    below plane 0. 0. 1. 04.
+  end atoms
+  atoms 33 52
+    over plane 0. 0. 1. 26.
+  end atoms
+end structure 
+
+  
+structure POPC.pdb 
+  number 64
+  inside box 0. 0. 30. 63.1 63.4 60.
+  atoms 33 52
+    below plane 0. 0. 1. 34.
+  end atoms
+  atoms 8
+    over plane 0. 0. 1. 56. 
+  end atoms
+end structure

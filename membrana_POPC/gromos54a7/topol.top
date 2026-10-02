@@ -18,5 +18,7 @@
 POPC in water
 
 [ molecules ]
-SOL     2000
+SOL         1916
+NA               42
+CL               42
 POPC    128
