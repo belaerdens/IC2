@@ -1,0 +1,15 @@
+;
+; Topology file for pure POPC membrane
+;
+
+; The force field files to be included
+#include "/home/user/Programas/gromacs-2026.3/share/top/gromos54a7.ff/forcefield.itp"
+
+;Include molecule .itp files
+#include "/home/user/Programas/gromacs-2026.3/share/top/gromos54a7.ff/popc.itp"
+
+[ system ]
+pure POPC
+
+[ molecules ]
+POPC    128
