@@ -1,6 +1,6 @@
 tolerance 2.0
 seed 246988
-pbc 63.1 63.4 160
+pbc 63.1 63.4 60
 
 filetype pdb
 

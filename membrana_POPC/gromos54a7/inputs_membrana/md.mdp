@@ -1,12 +1,12 @@
 ;title       = POPC Production MD 
 ; Run parameters
 integrator  = md        ; leap-frog integrator
-nsteps      = 250000000 ; 2 * 250000000 = 500000 ps (500 ns)
+nsteps      = 25000000  ; 2 * 25000000 = 50000 ps (50 ns)
 dt          = 0.002     ; 2 fs
 ; Output control
 nstxout     = 1000      ; save coordinates every 2 ps
 nstvout     = 1000      ; save velocities every 2 ps
-nstxtcout   = 1000      ; xtc compressed trajectory output every 2 ps
+;nstxtcout   = 1000      ; xtc compressed trajectory output every 2 ps
 nstenergy   = 1000      ; save energies every 2 ps
 nstlog      = 1000      ; update log file every 2 ps
 ; Bond parameters
